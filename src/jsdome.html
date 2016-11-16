@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>地图API示例</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+</head>
+<body onLoad="mapheight();">
+<div id="header">
+    <a class="logo">
+        <img src="images/logo.png">
+    </a>
+</div>
+<div id="content">
+    <div id="menu">
+        <ul>
+            <li id="list_item1">
+                <a class="one_head" listid="1"><i class="t_close"></i>地图示例</a>
+                <div id="submenu1" class="submenu">
+                    <dl>
+                        <dd><a href="tpl/demo/a1_2.htm" onClick="setIntro('a1_2');" target="container">地图展示</a></dd>
+                        <dd><a href="jsdemo/demo/a1_5.htm" onClick="setIntro('a1_5');" target="container">异步加载地图</a></dd>
+                        <dd><a href="jsdemo/demo/a1_6.htm" onClick="setIntro('a1_6');" target="container">同时加载两个地图</a></dd>
+                        <dd><a href="jsdemo/demo/a2_1.htm" onClick="setIntro('a2_1');" target="container">根据城市名设置地图中心点</a></dd>
+                        <dd><a href="jsdemo/demo/a2_3.htm" onClick="setIntro('a2_3');" target="container">设置地图最大、最小级别</a></dd>
+                        <dd><a href="jsdemo/demo/a3_1.htm" onClick="setIntro('a3_1');" target="container">移动地图</a></dd>
+                        <dd><a href="jsdemo/demo/a3_2.htm" onClick="setIntro('a3_2');" target="container">缩放地图</a></dd>
+                        <dd><a href="jsdemo/demo/a3_3.htm" onClick="setIntro('a3_3');" target="container">拖拽地图</a></dd>
+                        <dd><a href="jsdemo/demo/a1_7.htm" onClick="setIntro('a1_7');" target="container">设置地图显示范围</a></dd>
+                        <dd><a href="jsdemo/demo/a4_3.htm" onClick="setIntro('a4_3');" target="container">获取地图显示范围</a></dd>
+                        <dd><a href="jsdemo/demo/a6_1.htm" onClick="setIntro('a6_1');" target="container">获取两点间距离</a></dd>
+                        <dd><a href="jsdemo/demo/a7_1.htm" onClick="setIntro('a7_1');" target="container">关闭默认地图POI事件</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item2">
+                <a class="one_head" listid="2"><i class="t_close"></i>地图控件示例</a>
+                <div id="submenu2" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/b0_2.htm" onClick="setIntro('b0_2');" target="container">添加/删除工具条、比例尺控件</a></dd>
+                        <dd><a href="jsdemo/demo/b0_3.htm" onClick="setIntro('b0_3');" target="container">添加/删除地图类型、缩略图控件</a></dd>
+                        <dd><a href="jsdemo/demo/b0_7.htm" onClick="setIntro('b0_7');" target="container">添加定位相关控件<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/b0_4.htm" onClick="setIntro('b0_4');" target="container">添加第三方版权控件</a></dd>
+                        <dd><a href="jsdemo/demo/b0_6.htm" onClick="setIntro('b0_6');" target="container">添加自定义控件</a></dd>
+                        <dd><a href="jsdemo/demo/b_07.htm" onclick="setIntro('b_07');" target="container">添加城市列表控件</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item3">
+                <a class="one_head" listid="3"><i class="t_close"></i>覆盖物示例</a>
+                <div id="submenu3" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/c1_1.htm" onClick="setIntro('c1_1');" target="container">添加/删除覆盖物</a></dd>
+                        <dd><a href="jsdemo/demo/c1_2.htm" onClick="setIntro('c1_2');" target="container">设置点的弹跳动画</a></dd>
+                        <dd><a href="jsdemo/demo/c1_16.htm" onClick="setIntro('c1_16');" target="container">设置点的新图标</a></dd>
+                        <dd><a href="jsdemo/demo/c2_2.htm" onClick="setIntro('c2_2');" target="container">设置点是否可拖拽</a></dd>
+                        <dd><a href="jsdemo/demo/c2_9.htm" onClick="setIntro('c2_9');" target="container">设置线、面可编辑</a></dd>
+                        <dd><a href="jsdemo/demo/c2_1.htm" onClick="setIntro('c2_1');" target="container">设置覆盖物显示/隐藏</a></dd>
+                        <dd><a href="jsdemo/demo/c1_14.htm" onClick="setIntro('c1_14');" target="container">添加文字标签</a></dd>
+                        <dd><a href="jsdemo/demo/c2_3.htm" onClick="setIntro('c2_3');" target="container">设置覆盖物的文字标签</a></dd>
+                        <dd><a href="jsdemo/demo/c2_4.htm" onClick="setIntro('c2_4');" target="container">获取覆盖物信息</a></dd>
+                        <dd><a href="jsdemo/demo/c1_3.htm" onClick="setIntro('c1_3');" target="container">添加多个点示例</a></dd>
+                        <dd><a href="jsdemo/demo/c1_17.htm" onClick="setIntro('c1_17');" target="container">从多个点里删除特定点</a></dd>
+                        <dd><a href="jsdemo/demo/c1_6.htm" onClick="setIntro('c1_6');" target="container">加载闪烁点</a></dd>
+                        <dd><a href="jsdemo/demo/c1_19.htm" onClick="setIntro('c1_19');" target="container">加载海量点<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/c1_13.htm" onClick="setIntro('c1_13');" target="container">添加弧线</a></dd>
+                        <dd><a href="jsdemo/demo/c1_7.htm" onClick="setIntro('c1_7');" target="container">添加椭圆</a></dd>
+                        <dd><a href="jsdemo/demo/c1_10.htm" onClick="setIntro('c1_10');" target="container">添加行政区划</a></dd>
+                        <dd><a href="jsdemo/demo/c1_11.htm" onClick="setIntro('c1_11');" target="container">添加自定义覆盖物</a></dd>
+                        <dd><a href="jsdemo/demo/c1_18.htm" onClick="setIntro('c1_18');" target="container">添加/删除地面叠加层</a></dd>
+                        <dd><a href="jsdemo/demo/c1_4.htm" onClick="setIntro('c1_4');" target="container">点聚合</a></dd>
+                        <dd><a href="jsdemo/demo/c1_15.htm" onClick="setIntro('c1_15');" target="container">添加热力图</a></dd>
+                        <dd><a href="jsdemo/demo/c1_20.html" onClick="setIntro('c1_20');" target="container">矢量图标<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <!--<dd><a href="jsdemo/demo/c1_5.htm" onClick="setIntro('c1_5');" target="container">添加Voronoi图</a></dd>-->
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item4">
+                <a class="one_head" listid="4"><i class="t_close"></i>信息窗口示例</a>
+                <div id="submenu4" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/d0_1.htm" onClick="setIntro('d0_1');" target="container">添加纯文字的信息窗口</a></dd>
+                        <dd><a href="jsdemo/demo/d0_2.htm" onClick="setIntro('d0_2');" target="container">添加图文组合的信息窗口</a></dd>
+                        <dd><a href="jsdemo/demo/d0_4.htm" onClick="setIntro('d0_4');" target="container">添加带检索功能的信息窗口</a></dd>
+                        <dd><a href="jsdemo/demo/d0_5.htm" onClick="setIntro('d0_5');" target="container">给多个点添加信息窗口</a></dd>
+                        <dd><a href="jsdemo/demo/d0_3.htm" onClick="setIntro('d0_3');" target="container">获取信息窗口的内容</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item5">
+                <a class="one_head" listid="5"><i class="t_close"></i>右键菜单示例</a>
+                <div id="submenu5" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/e0_1.htm" onClick="setIntro('e0_1');" target="container">给地图添加右键菜单</a></dd>
+                        <dd><a href="jsdemo/demo/e0_4.htm" onClick="setIntro('e0_4');" target="container">给覆盖物添加右键菜单</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item6">
+                <a class="one_head" listid="6"><i class="t_close"></i>鼠标示例</a>
+                <div id="submenu6" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/f0_1.htm" onClick="setIntro('f0_1');" target="container">设置鼠标样式</a></dd>
+                        <dd><a href="jsdemo/demo/f0_4.htm" onClick="setIntro('f0_4');" target="container">鼠标滚轮缩放地图</a></dd>
+                        <dd><a href="jsdemo/demo/f0_5.htm" onClick="setIntro('f0_5');" target="container">鼠标拉框放大地图</a></dd>
+                        <dd><a href="jsdemo/demo/f0_6.htm" onClick="setIntro('f0_6');" target="container">鼠标测距</a></dd>
+                        <dd><a href="jsdemo/demo/f0_3.htm" onClick="setIntro('f0_3');" target="container">鼠标点击拾取坐标</a></dd>
+                        <dd><a href="jsdemo/demo/f0_7.htm" onClick="setIntro('f0_7');" target="container">鼠标绘制点线面</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item7">
+                <a class="one_head" listid="7"><i class="t_close"></i>叠加层示例</a>
+                <div id="submenu7" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/g0_3.htm" onClick="setIntro('g0_3');" target="container">叠加/删除路况图层</a></dd>
+                        <dd><a href="jsdemo/demo/g0_2.htm" onClick="setIntro('g0_2');" target="container">叠加/删除清华微观图</a></dd>
+                        <dd><a href="jsdemo/demo/g0_1.htm" onClick="setIntro('g0_1');" target="container">叠加/删除魔兽地图</a></dd>
+                        <dd><a href="jsdemo/demo/g0_4.htm" onClick="setIntro('g0_4');" target="container">叠加/删除麻点图层</a></dd>
+                        <dd><a href="jsdemo/demo/g0_5.htm" onClick="setIntro('g0_5');" target="container">叠加/删除自定义网格</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item8">
+                <a class="one_head" listid="8"><i class="t_close"></i>事件示例</a>
+                <div id="submenu8" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/h0_2.htm" onClick="setIntro('h0_2');" target="container">图块加载完成事件</a></dd>
+                        <dd><a href="jsdemo/demo/h0_4.htm" onClick="setIntro('h0_4');" target="container">地图单击事件</a></dd>
+                        <dd><a href="jsdemo/demo/h0_1.htm" onClick="setIntro('h0_1');" target="container">给覆盖物注册事件</a></dd>
+                        <dd><a href="jsdemo/demo/h0_3.htm" onClick="setIntro('h0_3');" target="container">传递事件参数</a></dd>
+                        <dd><a href="jsdemo/demo/h0_5.htm" onClick="setIntro('h0_5');" target="container">为多个点注册点击事件</a></dd>
+                        <dd><a href="jsdemo/demo/h0_6.htm" onClick="setIntro('h0_6');" target="container">注销事件</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item9">
+                <a class="one_head" listid="9"><i class="t_close"></i>GPS功能</a>
+                <div id="submenu9" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/c2_5.htm" onClick="setIntro('c2_5');" target="container">单个点沿线运动</a></dd>
+                        <dd><a href="jsdemo/demo/c2_6.htm" onClick="setIntro('c2_6');" target="container">多点沿线运动</a></dd>
+                        <dd><a href="jsdemo/demo/c2_8.htm" onClick="setIntro('c2_8');" target="container">路书</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item10">
+                <a class="one_head" listid="10"><i class="t_close"></i>全景图示例<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a>
+                <div id="submenu10" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/j1_0.htm" onClick="setIntro('j1_0');" target="container">全景控件展示</a></dd>
+                        <dd><a href="jsdemo/demo/j1_1.htm" onClick="setIntro('j1_1');" target="container">获取指定的全景图</a></dd>
+                        <dd><a href="jsdemo/demo/j1_2.htm" onClick="setIntro('j1_2');" target="container">叠加全景图层</a></dd>
+                        <dd><a href="jsdemo/demo/j5_3.htm" onClick="setIntro('j5_3');" target="container">显示/隐藏全景导航控件<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/j5_4.htm" onClick="setIntro('j5_4');" target="container">显示/隐藏全景道路指引控件<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/j5_5.htm" onClick="setIntro('j5_5');" target="container">添加/删除全景相册控件<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/j5_7.htm" onClick="setIntro('j5_7');" target="container">显示/隐藏室内景切换控件<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/j5_8.htm" onClick="setIntro('j5_8');" target="container">添加全景标注点示例<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/j5_9.htm" onClick="setIntro('j5_9');" target="container">设置全景内展示的POI类型<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <dd><a href="jsdemo/demo/j2_0.htm" onClick="setIntro('j2_0');" target="container">全景图旋转</a></dd>
+                        <dd><a href="jsdemo/demo/j4_0.htm" onClick="setIntro('j4_0');" target="container">全景图事件</a></dd>
+                        <dd><a href="jsdemo/demo/j3_0.htm" onClick="setIntro('j3_0');" target="container">获取全景图数据</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item11">
+                <a class="one_head" listid="11"><i class="t_close"></i>个性化地图</a>
+                <div id="submenu11" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/k0_2.htm" onClick="setIntro('k0_2');" target="container">设置主题模板样式</a></dd>
+                        <dd><a href="jsdemo/demo/k0_3.htm" onClick="setIntro('k0_3');" target="container">设置自定义样式</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item12">
+                <a class="one_head" listid="12"><i class="t_close"></i>检索示例</a>
+                <div id="submenu12" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/i1_1.htm" onClick="setIntro('i1_1');" target="container">关键字检索</a></dd>
+                        <dd><a href="jsdemo/demo/i1_3.htm" onClick="setIntro('i1_3');" target="container">多关键字检索</a></dd>
+                        <dd><a href="jsdemo/demo/i1_2.htm" onClick="setIntro('i1_2');" target="container">矩形区域检索</a></dd>
+                        <dd><a href="jsdemo/demo/i3_2.htm" onClick="setIntro('i3_2');" target="container">圆形区域检索</a></dd>
+                        <dd><a href="jsdemo/demo/i1_6.htm" onClick="setIntro('i1_6');" target="container">本地检索的结果面板</a></dd>
+                        <dd><a href="jsdemo/demo/i1_4.htm" onClick="setIntro('i1_4');" target="container">本地检索的数据接口</a></dd>
+                        <dd><a href="jsdemo/demo/i3_4.htm" onClick="setIntro('i3_4');" target="container">检索LBS云数据</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item13">
+                <a class="one_head" listid="13"><i class="t_close"></i>公交检索接口</a>
+                <div id="submenu13" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/i4_1.htm" onClick="setIntro('i4_1');" target="container">根据起终点名称查询公交换乘</a></dd>
+                        <dd><a href="jsdemo/demo/i4_2.htm" onClick="setIntro('i4_2');" target="container">根据起终点经纬度查询公交换乘</a></dd>
+                        <dd><a href="jsdemo/demo/i4_5.htm" onClick="setIntro('i4_5');" target="container">起终点不明确的公交换乘</a></dd>
+                        <dd><a href="jsdemo/demo/i4_7.htm" onClick="setIntro('i4_7');" target="container">公交换乘的结果面板</a></dd>
+                        <dd><a href="jsdemo/demo/i4_8.htm" onClick="setIntro('i4_8');" target="container">公交换乘的数据接口</a></dd>
+                        <dd><a href="jsdemo/demo/i4_9.htm" onClick="setIntro('i4_9');" target="container">修改公交换乘的起终点图标</a></dd>
+                        <dd><a href="jsdemo/demo/i4_4.htm" onClick="setIntro('i4_4');" target="container">查询公交、地铁线路</a></dd>
+                        <dd><a href="jsdemo/demo/i4_6.htm" onClick="setIntro('i4_6');" target="container">获取公交换乘的时间、距离</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item14">
+                <a class="one_head" listid="14"><i class="t_close"></i>驾车线路规划</a>
+                <div id="submenu14" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/i5_1.htm" onClick="setIntro('i5_1');" target="container">根据起终点名称查询驾车路线</a></dd>
+                        <dd><a href="jsdemo/demo/i5_2.htm" onClick="setIntro('i5_2');" target="container">根据起终点经纬度查询驾车路线</a></dd>
+                        <dd><a href="jsdemo/demo/i5_4.htm" onClick="setIntro('i5_4');" target="container">鼠标拖拽驾车起终点/途经点</a></dd>
+                        <dd><a href="jsdemo/demo/i5_9.htm" onClick="setIntro('i5_9');" target="container">动态设置驾车途经点<span style="font-size: 10px; padding-left: 5px; color: red;">new</span></a></dd>
+                        <!--<dd><a href="jsdemo/demo/i5_3.htm" onClick="setIntro('i5_3');" target="container">设置驾车多途经点</a></dd>--暂时还不支持-->
+                        <dd><a href="jsdemo/demo/i5_8.htm" onClick="setIntro('i5_8');" target="container">驾车路线的结果面板</a></dd>
+                        <dd><a href="jsdemo/demo/i5_7.htm" onClick="setIntro('i5_7');" target="container">驾车路线的数据接口</a></dd>
+                        <dd><a href="jsdemo/demo/i5_5.htm" onClick="setIntro('i5_5');" target="container">计算驾车时间和距离</a></dd>
+                        <dd><a href="jsdemo/demo/i5_6.htm" onClick="setIntro('i5_6');" target="container">计算打车费用</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item15">
+                <a class="one_head" listid="15"><i class="t_close"></i>步行规划</a>
+                <div id="submenu15" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/i6_1.htm" onClick="setIntro('i6_1');" target="container">根据起终点名称规划步行线路</a></dd>
+                        <dd><a href="jsdemo/demo/i6_2.htm" onClick="setIntro('i6_2');" target="container">步行规划结果面板</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item16">
+                <a class="one_head" listid="16"><i class="t_close"></i>逆/地址解析</a>
+                <div id="submenu16" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/i7_1.htm" onClick="setIntro('i7_1');" target="container">地址解析</a></dd>
+                        <dd><a href="jsdemo/demo/i7_2.htm" onClick="setIntro('i7_2');" target="container">逆地址解析</a></dd>
+                        <dd><a href="jsdemo/demo/i7_3.htm" onClick="setIntro('i7_3');" target="container">批量地址解析</a></dd>
+                        <dd><a href="jsdemo/demo/i7_4.htm" onClick="setIntro('i7_4');" target="container">批量逆地址解析</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item17">
+                <a class="one_head" listid="17"><i class="t_close"></i>坐标转换</a>
+                <div id="submenu17" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/a5_1.htm" onClick="setIntro('a5_1');" target="container">google坐标转成百度坐标</a></dd>
+                        <dd><a href="jsdemo/demo/a5_2.htm" onClick="setIntro('a5_2');" target="container">原始坐标转成百度坐标</a></dd>
+                        <dd><a href="jsdemo/demo/a5_3.htm" onClick="setIntro('a5_3');" target="container">批量坐标转换</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item18">
+                <a class="one_head" listid="18"><i class="t_close"></i>输入提示示例</a>
+                <div id="submenu18" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/a6_2.htm" onClick="setIntro('a6_2');" target="container">关键字提示输入</a></dd>
+                    </dl>
+                </div>
+            </li>
+            <li id="list_item19">
+                <a class="one_head" listid="19"><i class="t_close"></i>定位示例</a>
+                <div id="submenu19" class="submenu">
+                    <dl>
+                        <dd><a href="jsdemo/demo/i8_1.htm" onClick="setIntro('i8_1');" target="container">浏览器定位</a></dd>
+                        <dd><a href="jsdemo/demo/i8_2.htm" onClick="setIntro('i8_2');" target="container">根据ip定位</a></dd>
+                        <dd><a href="jsdemo/demo/i8_3.htm" onClick="setIntro('i8_3');" target="container">根据城市名定位</a></dd>
+                        <dd><a href="jsdemo/demo/i8_4.htm" onClick="setIntro('i8_4');" target="container">根据经纬度定位</a></dd>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="code_area" unselectable="on">
+        <div id="openbar" unselectable="on">
+            <div id="d_menu">
+                <div id="d_clip_container"><a id="d_clip_button" class="copy" style="z-index: 1000;">复制</a></div>
+                <div id="d_run_container"><a id="d_run_button" onClick="run();" class="run">运行</a></div>
+                <div id="d_refresh_container"><a id="d_refresh_button" onClick="refresh();">刷新</a></div>
+                <div id="d_help_container"><a id="d_help_button" href="http://bbs.lbsyun.baidu.com/" target="_blank">帮助</a></div>
+            </div>
+            <p>源代码编辑器</p>
+        </div>
+        <textarea id="myresource" class="clearfix" onChange="clip.setText(this.value)"></textarea>
+        <div id="code_close" onClick="toggleFooter();"></div>
+    </div>
+    <div id="drag"></div>
+    <div id="mapContent" class="clearfix">
+        <div id="code_open" onClick="toggleFooter();"></div>
+        <div id="overiframe" style=" background:url(about:_blank);" unselectable="on"></div>
+        <iframe class="" unselectable="on" name="container" id="container" src="jsdemo/demo/a1_2.htm"></iframe>
+    </div>
+</div>
+<!--for jsdemo guide-->
+<script type="text/javascript" src="public/codemirror.min.js"></script>
+<script type="text/javascript" src="public/ZeroClipboard.js"></script>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript" src="script/jsdome.js"></script>
+
+<!-- <script type="text/javascript" src="jsdemo/demoGuide.js"></script> -->
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5650c092812f8659cdfe23eeb42024ef' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
