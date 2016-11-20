@@ -116,6 +116,14 @@ function codeChange(){
     }
 }
 /**
+ * 刷新页面
+ */
+function refresh(){
+    $("#myresource").val(localStorage.content);
+    initEditor();
+    run();
+}
+/**
  * 从服务器获取html页面
  */
 function getresource(){
