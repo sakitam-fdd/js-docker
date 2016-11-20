@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>openlayer地图API</title>
+    <meta http-equiv="Content-Type"/>
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<div class="header">
+    <a class="logo">
+        <img src="images/timg.jpg">
+    </a>
+</div>
+<div class="content">
+    <div class="menu">
+
+    </div>
+    <div class="codeContent" unselectable="on">
+        <div class="openbar" unselectable="on">
+            <div class="user_menu">
+                <div class="clip_container"><a id="d_clip_button" class="copy" style="z-index: 1000;">复制</a></div>
+                <div class="run_container"><a id="d_run_button" onClick="run();" class="run">运行</a></div>
+                <div class="refresh_container"><a id="d_refresh_button" onClick="refresh();">刷新</a></div>
+                <div class="help_container"><a id="d_help_button" href="https://github.com/smileFDD/myMapApi" target="_blank">帮助</a></div>
+            </div>
+            <p>源代码编辑器</p>
+        </div>
+        <textarea id="myresource" class="clearfix" onChange="clip.setText(this.value)"></textarea>
+        <div class="codeContent_close" onClick="togglebar();"></div>
+    </div>
+    <div id="drag"></div>
+    <div class="mapContent" class="clearfix">
+        <div class="codeContent_open" onClick="togglebar();"></div>
+        <div id="overiframe" style=" background:url(about:_blank);" unselectable="on"></div>
+        <iframe class="" unselectable="on" name="container" id="container" src="tpl/demo/a1_2.html"></iframe>
+    </div>
+</div>
+<script type="text/javascript" src="public/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="public/js/codemirror.min.js"></script>
+<script type="text/javascript" src="public/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="script/app.js"></script>
+</body>
+</html>
