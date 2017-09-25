@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>openlayer地图API</title>
-    <meta http-equiv="Content-Type"/>
-    <link rel="stylesheet" href="css/codemirror.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css"/>
+  <meta charset="UTF-8">
+  <title>openlayer在线编辑功能</title>
+  <meta http-equiv="Content-Type"/>
+  <link rel="stylesheet" href="css/codemirror.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
 <div class="header">
-    <a class="logo">
-        <img src="images/timg.jpg">
-    </a>
+  <a class="logo">
+    <img src="images/timg.jpg">
+  </a>
 </div>
 <div class="content">
-    <div class="menu">
-
-    </div>
-    <div class="codeContent" unselectable="on">
-        <div class="openbar" unselectable="on">
-            <div class="user_menu">
-                <div class="clip_container"><a id="d_clip_button" class="copy" style="z-index: 1000;">复制</a></div>
-                <div class="run_container"><a id="d_run_button" onClick="run();" class="run">运行</a></div>
-                <div class="refresh_container"><a id="d_refresh_button" onClick="refresh();">刷新</a></div>
-                <div class="help_container"><a id="d_help_button" href="https://github.com/smileFDD/myMapApi" target="_blank">帮助</a></div>
-            </div>
-            <p>源代码编辑器</p>
+  <div class="menu" id="menu">
+    <ul>
+      <li id="list_item1">
+        <a class="one_head" listid="1"><i class="t_close"></i>地图示例</a>
+        <div id="submenu1" class="submenu">
+          <dl>
+            <dd><a href="tpl/demo/a1_2.html" onClick="setIntro('a1_2');" target="container">地图展示</a></dd>
+            <dd><a href="tpl/demo/a1_3.html" onClick="setIntro('a1_3');" target="container">异步加载地图</a></dd>
+            <dd><a href="tpl/demo/a1_6.html" onClick="setIntro('a1_6');" target="container">同时加载两个地图</a></dd>
+            <dd><a href="tpl/demo/a2_1.html" onClick="setIntro('a2_1');" target="container">根据城市名设置地图中心点</a></dd>
+            <dd><a href="tpl/demo/a2_3.html" onClick="setIntro('a2_3');" target="container">设置地图最大、最小级别</a></dd>
+            <dd><a href="tpl/demo/a3_1.html" onClick="setIntro('a3_1');" target="container">移动地图</a></dd>
+            <dd><a href="tpl/demo/a3_2.html" onClick="setIntro('a3_2');" target="container">缩放地图</a></dd>
+            <dd><a href="tpl/demo/a3_3.html" onClick="setIntro('a3_3');" target="container">拖拽地图</a></dd>
+            <dd><a href="tpl/demo/a1_7.html" onClick="setIntro('a1_7');" target="container">设置地图显示范围</a></dd>
+            <dd><a href="tpl/demo/a4_3.html" onClick="setIntro('a4_3');" target="container">获取地图显示范围</a></dd>
+            <dd><a href="tpl/demo/a6_1.html" onClick="setIntro('a6_1');" target="container">获取两点间距离</a></dd>
+            <dd><a href="tpl/demo/a7_1.html" onClick="setIntro('a7_1');" target="container">关闭默认地图POI事件</a></dd>
+          </dl>
         </div>
-        <textarea id="myresource" class="clearfix" onChange="clip.setText(this.value)"></textarea>
-        <div class="codeContent_close" onClick="togglebar();"></div>
+      </li>
+    </ul>
+  </div>
+  <div class="codeContent" unselectable="on">
+    <div class="openbar" unselectable="on">
+      <div class="user_menu">
+        <div class="clip_container"><a id="d_clip_button" class="copy" style="z-index: 1000;">复制</a></div>
+        <div class="run_container"><a id="d_run_button" onClick="run();" class="run">运行</a></div>
+        <div class="refresh_container"><a id="d_refresh_button" onClick="refresh();">刷新</a></div>
+        <div class="help_container"><a id="d_help_button" href="https://github.com/smileFDD/myMapApi"
+                                       target="_blank">帮助</a></div>
+      </div>
+      <p>源代码编辑器</p>
     </div>
-    <div id="drag"></div>
-    <div class="mapContent" class="clearfix">
-        <div class="codeContent_open" onClick="togglebar();"></div>
-        <div id="overiframe" style=" background:url(about:_blank);" unselectable="on"></div>
-        <iframe class="" unselectable="on" name="container" id="container" src="tpl/demo/a1_2.html"></iframe>
-    </div>
+    <textarea id="myresource" class="clearfix" onChange="clip.setText(this.value)"></textarea>
+    <div class="codeContent_close" onClick="togglebar();"></div>
+  </div>
+  <div id="drag"></div>
+  <div class="mapContent" class="clearfix">
+    <div class="codeContent_open" onClick="togglebar();"></div>
+    <div id="overiframe" style=" background:url(about:_blank);" unselectable="on"></div>
+    <iframe class="" unselectable="on" name="container" id="container" src="tpl/demo/a1_2.html"></iframe>
+  </div>
 </div>
 <script type="text/javascript" src="public/js/ZeroClipboard.js"></script>
 <script type="text/javascript" src="public/js/codemirror.min.js"></script>

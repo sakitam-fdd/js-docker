@@ -5,11 +5,11 @@ var minifyCss = require('gulp-minify-css');            // 压缩CSS；
 var sass = require('gulp-ruby-sass');			             // 编译scss
 
 var src = {
-    scss: 'src/scss/*.scss',
-    css: 'src/dist/css/',
-    compressCss: 'src/dist/css/*.css',
-    minCss: 'src/dist/minCss/',
-    html: 'src/app/tpl/*.html'
+    scss: './scss/*.scss',
+    css: './dist/css/',
+    compressCss: './dist/css/*.css',
+    minCss: './dist/minCss/',
+    html: './app/tpl/*.html'
 };
 
 // sass任务
