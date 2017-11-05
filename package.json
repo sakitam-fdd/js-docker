@@ -1,11 +1,11 @@
 {
-  "name": "myMapApi",
+  "name": "js-docker",
   "version": "1.0.0",
   "scripts": {
-    "build": "yarn install && gulp",
+    "build": "npm install && gulp",
     "test": ""
   },
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.1",
@@ -16,9 +16,5 @@
     "gulp-ruby-sass": "^2.1.1",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.10"
-  },
-  "dependencies": {
-    "angular-tooltips": "^1.1.7",
-    "angularjs-slider": "^5.7.0"
   }
 }
